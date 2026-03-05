@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="About.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="Home.html" class="nav-logo">Portfolio<span>.</span></a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html" class="active">About</a></li>
+            <li><a href="Service.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+    <script>
+        const ham = document.getElementById('hamburger');
+        const nav = document.getElementById('navLinks');
+        const overlay = document.getElementById('navOverlay');
+        ham.addEventListener('click', () => { nav.classList.toggle('open'); overlay.classList.toggle('show'); ham.classList.toggle('active'); });
+        overlay.addEventListener('click', () => { nav.classList.remove('open'); overlay.classList.remove('show'); ham.classList.remove('active'); });
+    </script>
+    <section class="about-section">
+        <div class="about-photo">
+            <div class="photo-ring">
+                <div class="photo"></div>
+            </div>
+        </div>
+        <div class="about-text">
+            <p class="section-label">Get To Know</p>
+            <h1 class="about-title">About <span class="highlight">Me</span></h1>
+            <h2 class="about-role">Web Developer</h2>
+            <p class="about-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, animi eius
+                facilis, nulla labore cupiditate asperiores aliquid voluptatum molestias dolorum expedita rem
+                officiis incidunt voluptatem corporis ducimus tempora similique repellat enim laborum consequuntur
+                odit delectus sequi. Tempora architecto, consectetur iste animi ipsa aspernatur. Numquam accusantium
+                odio ipsam, soluta aliquam eligendi possimus neque id aliquid deserunt cumque ratione blanditiis.</p>
+            <div class="about-actions">
+                <a href="#" class="read-btn">Read More</a>
+                <a href="Contact.html" class="hire-btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
